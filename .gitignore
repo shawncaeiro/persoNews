@@ -2,3 +2,4 @@ flask/
 exploratory/twitter/keys.txt
 config.py
 config.pyc
+*.pyc
