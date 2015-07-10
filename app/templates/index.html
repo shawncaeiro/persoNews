@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Hi, Enter your twitter username:</h1>
+<form action="" method="post" name="search">
+  {{ form.hidden_tag() }}
+  <p>
+      Enter your twitter username:<br>
+      {{ form.username(size=80) }}<br>
+      {% for error in form.username.errors %}
+      <span style="color: red;">[{{ error }}]</span>
+      {% endfor %}<br>
+  </p>
+  <p><input type="submit" value="Sign In"></p>
+</form>
+
+{% endblock %}
