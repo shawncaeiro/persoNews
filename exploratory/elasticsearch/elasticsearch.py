@@ -27,8 +27,9 @@ for hit in res['hits']['hits']:
 # NOTE similarity does not work for test sentences. 
 # A senstence will generally not be simialr enough regardless
 es.mlt(index='news', doc_type="article",
-                          id=doc_id, mlt_fields="text", 
+                          id=1, mlt_fields="text", 
                           search_size=7,
                           min_term_freq=0,
                           min_doc_freq=0,
                           percent_terms_to_match= 0)
+

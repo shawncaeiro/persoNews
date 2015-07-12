@@ -12,6 +12,24 @@ import pickle
 import datetime, date, timedelta
 import pytz
 
+def makeDocs():
+    cnn_paper = newspaper.build(u'http://cnn.com', memoize_articles=False)
+    a = defaultdict(int)
+    cnn_articles = cnn_paper.articles
+    for i in range(10):
+        article = cnn_articles[i]
+        url = art.url
+        art = Article(url)
+        art.download()
+        art.parse()
+        if art.publish_date & art.text:
+            doc = {
+            'domain': 'CNN',
+            'date': utc.localize(art.publish_date), 
+            'text': art.text
+            }
+
+
 def buildNewspaper():
     cnn_paper = newspaper.build(u'http://cnn.com', memoize_articles=False)
     a = defaultdict(int)

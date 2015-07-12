@@ -11,7 +11,6 @@ def index():
     if form.validate_on_submit():
         try: 
             tweets = api.user_timeline(screen_name = form.username.data, count = 50)
-            flash('Searched' + form.username.data)
         except:
             flash("Username Error")
             return redirect(url_for('index'))
